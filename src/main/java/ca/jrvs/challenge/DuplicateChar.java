@@ -5,10 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DuplicateChar {
-//    public static void main(String[] args) {
-//        DuplicateChar duplicateChar = new DuplicateChar();
-//        System.out.println(duplicateChar.duplicate("hello there"));
-//    }
 
     /**
      * Method to find the duplicate characters in an array
@@ -31,7 +27,6 @@ public class DuplicateChar {
             }
         }
 
-
         for (Map.Entry<Character, Integer> item : testmap.entrySet()) {
             Character key = item.getKey();
             Integer value = item.getValue();
@@ -39,7 +34,7 @@ public class DuplicateChar {
                 duplicateArray.add(key);
         }
 
-
-        return duplicateArray.toString().toCharArray();
+        System.out.println("array" + duplicateArray.toString().toCharArray() );
+        char[] charDuplicateArray = duplicateArray.toArray(new char[duplicateArray.size()]);
     }
 }
