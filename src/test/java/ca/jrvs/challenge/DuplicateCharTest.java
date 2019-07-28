@@ -16,8 +16,8 @@ public class DuplicateCharTest {
 
     @Test
     public void duplicate() {
-        char[] duplicateArray = duplicateChar.duplicate("hello");
-        char[] expectedArray={'l'};
-       // assertArrayEquals(expectedArray,duplicateArray);
+        Character[] duplicateArray = duplicateChar.duplicate("hi there hello");
+        Character[] expectedArray={'e','h','l'};
+        assertArrayEquals(expectedArray,duplicateArray);
     }
 }

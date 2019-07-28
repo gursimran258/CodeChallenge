@@ -1,5 +1,7 @@
 package ca.jrvs.challenge;
 
+import com.sun.deploy.util.ArrayUtil;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,12 +12,12 @@ public class DuplicateChar {
      * Method to find the duplicate characters in an array
      *
      * @param text that needs to be checked to find the duplicate characters
-     * @return duplicate characters array
+     * @return duplicate character array
      */
-    public char[] duplicate(String text) {
+    public Character[] duplicate(String text) {
         HashMap<Character, Integer> testmap = new HashMap<Character, Integer>();
         ArrayList<Character> duplicateArray = new ArrayList<Character>();
-        char[] charArray = text.toCharArray();
+        char[] charArray = text.replace(" ", "").toCharArray();
         for (char c : charArray) {
             //  int count = 0;
             if (testmap.containsKey(c)) {
@@ -33,8 +35,6 @@ public class DuplicateChar {
             if (value > 1)
                 duplicateArray.add(key);
         }
-
-        System.out.println("array" + duplicateArray.toString().toCharArray() );
-        char[] charDuplicateArray = duplicateArray.toArray(new char[duplicateArray.size()]);
+    return duplicateArray.toArray(new Character[duplicateArray.size()]);
     }
 }
