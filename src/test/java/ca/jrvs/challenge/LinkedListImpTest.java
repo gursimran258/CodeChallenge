@@ -27,7 +27,7 @@ public class LinkedListImpTest {
         linkedListImp.addAtHeadNode(4);
         linkedListImp.addAtTailNode(5);
         int expectedValue = 5;
-        int actualValue= linkedListImp.getValue(linkedListImp.getListSize());
+        int actualValue= linkedListImp.getValue(linkedListImp.getListSize(linkedListImp.getHeadNode()));
         assertEquals(expectedValue,actualValue);
     }
 

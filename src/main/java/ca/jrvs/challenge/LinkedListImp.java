@@ -22,6 +22,9 @@ public class LinkedListImp {
         size++;
     }
 
+    public Node getHeadNode() {
+        return headNode;
+    }
     //add a node at the end of the linked list after the tail node
     public void addAtTailNode(int value) {
         Node newtNode = new Node(value);
@@ -64,7 +67,7 @@ public class LinkedListImp {
     public int getValue(int index) {
         int i = 0;
         Node currentNode = headNode.next;
-        if (index < i || index > size)
+        if (index > size)
             throw new IllegalArgumentException("Invalid argument");
 
         for (int j = 1; j < index; j++) {
@@ -76,10 +79,10 @@ public class LinkedListImp {
     /**
      * Linked list size using iteration that iterates till it finds the null node on which it returns the
      * size of linked list.
-     * @return
+     * @return size of linked list
      */
-    //get size of linkedlist
-    public int getListSize(){
+    //get size of linkedlist iteratively
+    public int getListSize(Node headNode){
         int listSize = 0;
         Node currentNode = headNode;
         while(currentNode.next!=null) {
@@ -87,6 +90,19 @@ public class LinkedListImp {
             listSize++;
         }
         return listSize;
+    }
+
+    /**
+     * Linked list size using recursion
+     * @param current node
+     * @return size of linked list
+     */
+    public int getListSize_Rec(Node current){
+        int listSize = 0;
+        if(current == null)
+            return 0;
+
+    return 1+getListSize_Rec(current.next);
     }
 
     public class Node {
