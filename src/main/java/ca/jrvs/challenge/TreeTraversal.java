@@ -4,21 +4,23 @@ import ca.jrvs.challenge.BinarySearchTree;
 public class TreeTraversal extends BinarySearchTree {
 
     private BinarySearchTree binarySearchTree;
+    private String dataStr ;
 
     public void setBinarySearchTree() {
         binarySearchTree = new BinarySearchTree();
     }
 
     public String traversePreOrder(Node node) {
-        String dataString = " ";
         Node curr = node;
         if (curr != null) {
             System.out.println(" " + curr.data);
+            this.dataStr = this.dataStr + " " + curr.data;
             traversePreOrder(curr.left);
             traversePreOrder(curr.right);
+            System.out.println(this.dataStr);
+            return this.dataStr;
         }
-        //  System.out.println(dataString);
-        return dataString;
+         return  "";
     }
 
     public void traversePosOrcer(Node node) {

@@ -24,7 +24,7 @@ public class TreeTraversalTest {
         binarySearchTree.add(8);
         binarySearchTree.add(7);
         treeTraversal.setBinarySearchTree();
-      String treeTet = treeTraversal.traversePreOrder(binarySearchTree.getRoot());
+        String treeTet = treeTraversal.traversePreOrder(binarySearchTree.getRoot());
     }
 
     @Test
