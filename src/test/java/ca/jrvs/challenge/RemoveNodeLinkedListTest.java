@@ -24,9 +24,10 @@ public class RemoveNodeLinkedListTest {
         linkedList.addAtTailNode(1);
         linkedList.addAtTailNode(9);
         linkedList.addAtTailNode(8);
-        removeNodeLinkedList.nodeRemoval(linkedList.getHeadNode(), 3);
+
+        removeNodeLinkedList.nodeRemoval(linkedList.getHeadNode(), 4);
         int actualNodeValue = linkedList.getValue(3);
-        int expectedNodeValue = 9;
+        int expectedNodeValue = 1;
         assertEquals(expectedNodeValue,actualNodeValue);
     }
 }

@@ -24,7 +24,6 @@ public class MergeSortedArrays {
             while(j<n2)
                 mergedArray[k++] = secondArray[j++];
         }
-        System.out.println("merged array" + mergedArray);
         return mergedArray;
     }
 }

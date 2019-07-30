@@ -14,9 +14,14 @@ public class ValidParenthesisTest {
     }
 
     @Test
-    public void isValidParenthesis() {
-        String inputString = "[(})]";
-        boolean condition = validParenthesis.isValidParenthesis(inputString);
-        System.out.println(condition);
+    public void isValidParenthesisHappy() {
+        String inputString = "[({})]";
+        assertTrue(validParenthesis.isValidParenthesis(inputString));
+    }
+
+    @Test
+    public void isValidParenthesisSad() {
+        String inputString = "[({]";
+        assertFalse(validParenthesis.isValidParenthesis(inputString));
     }
 }

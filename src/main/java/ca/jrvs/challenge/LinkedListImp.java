@@ -67,9 +67,6 @@ public class LinkedListImp {
     public int getValue(int index) {
         int i = 0;
         Node currentNode = headNode.next;
-        if (index > size)
-            throw new IllegalArgumentException("Invalid argument");
-
         for (int j = 1; j < index; j++) {
             currentNode = currentNode.next;
         }

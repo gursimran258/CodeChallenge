@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class ValidParenthesis {
-     private HashMap<Character, Character> characterHashMap = new HashMap<Character, Character>();
+    private  ValidParenthesis validParenthesis;
+     private static HashMap<Character, Character> characterHashMap = new HashMap<Character, Character>();
 
     public void setCharacterHashMap() {
         this.characterHashMap.put(')','(');
@@ -12,8 +13,14 @@ public class ValidParenthesis {
         this.characterHashMap.put(']','[');
     }
 
+    /**
+     * Method to check if the given string has valid parenthesis or not
+     * @param s
+     * @return true if the given string has valid parenthesis else return false
+     */
     public boolean isValidParenthesis(String s) {
-
+            validParenthesis = new ValidParenthesis();
+            validParenthesis.setCharacterHashMap();
          Stack<Character> characterStack = new Stack<Character>();
         //traverse the string
          for(int i =0; i < s.length(); i++) {

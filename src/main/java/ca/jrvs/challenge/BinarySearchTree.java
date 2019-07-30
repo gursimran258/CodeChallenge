@@ -2,6 +2,9 @@ package ca.jrvs.challenge;
 
 import java.util.Stack;
 
+/**
+ * Implementation of Binary Search Tree
+ */
 public class BinarySearchTree {
 
     private Node root;
@@ -73,5 +76,4 @@ public class BinarySearchTree {
             right = null;
         }
     }
-
 }
