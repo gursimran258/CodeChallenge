@@ -14,15 +14,15 @@ public class BinarySearchTreeTest {
         binarySearchTree = new BinarySearchTree();
     }
 
-    @Test
-    public void add() {
-        binarySearchTree.add(3);
-        binarySearchTree.add(5);
-        binarySearchTree.add(6);
-    }
 
     @Test
     public void size() {
+        binarySearchTree.add(3);
+        binarySearchTree.add(1);
+        binarySearchTree.add(5);
+        int expectedNodes =3;
+        int actualNodes = binarySearchTree.size(binarySearchTree.getRoot());
+        assertEquals(expectedNodes,actualNodes);
     }
 
     @Test

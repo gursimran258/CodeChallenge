@@ -10,54 +10,48 @@ public class BinarySearchTree {
     private Node root;
 
     public BinarySearchTree() {
-        root = null;
+        this.root = null;
     }
 
     public Node getRoot() {
-        return root;
+        return this.root;
     }
 
+    public int getValue(Node node) {
+        return node.data;
+    }
     //to check if BST is empty
     public boolean isEmpty() {
-        return null == root;
+        return null == this.root;
     }
 
     //helper method to insert new node into the BST
     private Node addNode(Node current, int value) {
-        if (current == null)
+        if (current == null) {
             return new Node(value);
-
+        }
         if (value < current.data) {
-            current.left = addNode(current, value);
+            current.left = addNode(current.left,value);
         } else if (value > current.data) {
-            current.right = addNode(current, value);
+            current.right = addNode(current.right,value);
         } else {
             return current;
         }
+
         return current;
     }
 
     //add node into the BST
     public void add(int value) {
-        root = addNode(root, value);
+        this.root = addNode(this.root, value);
     }
 
     //returns the size of binary search tee
-    public int size() {
-        Node current = root;
-        int size = 0;
-        Stack<Node> stack = new Stack<Node>();
-        while (!stack.isEmpty() || current !=null) {
-           if(current != null) {
-            stack.push(current);
-            current = current.left;
-           } else {
-               size++;
-               current = stack.pop();
-               current = current.right;
-           }
-        }
-        return size;
+    public int size(Node node) {
+        if(node== null)
+            return 0;
+        else
+            return (size(node.left)+1+size(node.right));
     }
 
     //Java function to clear the binary search tree
@@ -65,13 +59,13 @@ public class BinarySearchTree {
         root = null;
     }
 
-    private static class Node {
-        private int data;
-        private Node left;
-        private Node right;
+    protected class Node {
+        protected int data;
+        protected Node left;
+        protected Node right;
 
         public Node(int value) {
-            data = value;
+            this.data = value;
             left = null;
             right = null;
         }
