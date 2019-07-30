@@ -5,7 +5,7 @@ challenge except for Linked List class which had multiple challenges in a class.
 I will continue to add more challenges to this repository as I encounter. This is fun.
 
 ## Dependencies
--Junit:Testing
+- Junit:Testing
 
 ## Improvements
-There are numerous coding challenges that will added to this repository
+There are numerous coding challenges that will added to this repository.
